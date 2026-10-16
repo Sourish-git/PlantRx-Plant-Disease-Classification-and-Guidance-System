@@ -85,8 +85,9 @@ The application follows an end-to-end image classification workflow:
 
 ### System Architecture
 
+
 ```mermaid
-flowchart TD
+flowchart LR
     A["User"] --> B["React + Vite Frontend"]
     B --> C["FastAPI Backend"]
     C --> D["Image Preprocessing"]
@@ -106,18 +107,20 @@ flowchart TD
     style H fill:#dcedc8,stroke:#558b2f,color:#1b5e20
 ```
 
+
 ### System Workflow
 
+
 ```mermaid
-flowchart TD
-    A([Start]) --> B["Upload Leaf Image"]
-    B --> C["Validate and Preprocess Image"]
+flowchart LR
+    A(["Start"]) --> B["Upload Leaf Image"]
+    B --> C["Validate and Preprocess"]
     C --> D["MobileNetV2 Prediction"]
     D --> E["Identify Predicted Class"]
-    E --> F["Calculate Confidence and Top Predictions"]
-    F --> G["Retrieve Disease Information and Remedies"]
+    E --> F["Confidence and Top Predictions"]
+    F --> G["Retrieve Disease Information"]
     G --> H["Display Prediction and Guidance"]
-    H --> I([End])
+    H --> I(["End"])
 
     style A fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20
     style B fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
@@ -129,6 +132,7 @@ flowchart TD
     style H fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
     style I fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20
 ```
+
 
 
 ## Project Limitations
