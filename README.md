@@ -41,6 +41,9 @@ The project aims to make preliminary plant disease identification more accessibl
 
 The project uses the cleaned PlantVillage dataset for plant leaf disease classification.
 
+The data used in this project can be found on plantvillage-dataset(https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset).
+
+
 | Dataset characteristic | Details |
 |---|---|
 | Total images | 54,284 |
