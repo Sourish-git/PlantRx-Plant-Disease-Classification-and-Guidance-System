@@ -101,8 +101,6 @@ To run the application, use the configuration files and setup instructions inclu
 
 **Institution:** SRM Institute of Science and Technology, Kattankulathur, Chennai
 
-**Project Guide:** Dr. S. Sivakumar, Assistant Professor
-
 **Project Team:**
 - Abhirup Urinda
 - Sourish Halder
