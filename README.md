@@ -105,8 +105,8 @@ To run the application, use the configuration files and setup instructions inclu
 **Institution:** SRM Institute of Science and Technology, Kattankulathur, Chennai
 
 **Project Team:**
-- Abhirup Urinda
 - Sourish Halder
+- Abhirup Urinda
 - Om Desai
 - Sanket Kurmi
 
