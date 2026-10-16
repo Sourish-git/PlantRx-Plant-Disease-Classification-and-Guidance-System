@@ -82,6 +82,55 @@ The application follows an end-to-end image classification workflow:
 5. **Remedy lookup:** The predicted class is used to retrieve relevant information from the remedy database.
 6. **Result display:** The web interface presents the prediction and associated guidance.
 
+
+### System Architecture
+
+```mermaid
+flowchart TD
+    A["User"] --> B["React + Vite Frontend"]
+    B --> C["FastAPI Backend"]
+    C --> D["Image Preprocessing"]
+    D --> E["MobileNetV2 Model"]
+    E --> F["Predicted Disease + Confidence"]
+    F --> G["Remedy Database"]
+    G --> H["Result and Guidance"]
+    H --> B
+
+    style A fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
+    style B fill:#dcedc8,stroke:#558b2f,color:#1b5e20
+    style C fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20
+    style D fill:#f1f8e9,stroke:#689f38,color:#1b5e20
+    style E fill:#dcedc8,stroke:#388e3c,color:#1b5e20
+    style F fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    style G fill:#c8e6c9,stroke:#388e3c,color:#1b5e20
+    style H fill:#dcedc8,stroke:#558b2f,color:#1b5e20
+```
+
+### System Workflow
+
+```mermaid
+flowchart TD
+    A([Start]) --> B["Upload Leaf Image"]
+    B --> C["Validate and Preprocess Image"]
+    C --> D["MobileNetV2 Prediction"]
+    D --> E["Identify Predicted Class"]
+    E --> F["Calculate Confidence and Top Predictions"]
+    F --> G["Retrieve Disease Information and Remedies"]
+    G --> H["Display Prediction and Guidance"]
+    H --> I([End])
+
+    style A fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20
+    style B fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
+    style C fill:#f1f8e9,stroke:#689f38,color:#1b5e20
+    style D fill:#dcedc8,stroke:#558b2f,color:#1b5e20
+    style E fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
+    style F fill:#dcedc8,stroke:#558b2f,color:#1b5e20
+    style G fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20
+    style H fill:#e8f5e9,stroke:#388e3c,color:#1b5e20
+    style I fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20
+```
+
+
 ## Project Limitations
 
 - The classifier supports only the 38 classes represented in the training dataset.
